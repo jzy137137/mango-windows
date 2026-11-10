@@ -1,0 +1,99 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "nested_1",
+                    "string": "nested_1(<MultiValues(<BV64 TOP>)>) @ 0x4012b9",
+                    "ins_addr": "0x4012b9"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV64 heap_base>)>) @ 0x4012fe",
+                "ins_addr": "0x4012fe"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "UNKNOWN"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    4199150
+                ]
+            },
+            "rank": 0.7,
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "child",
+                    "string": "child() @ 0x401208",
+                    "ins_addr": "0x401208"
+                },
+                {
+                    "function": "wrapper",
+                    "string": "wrapper(<MultiValues(<BV64 stack_base + 0xfffffffffffffef0>)>) @ 0x401273",
+                    "ins_addr": "0x401273"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV64 stack_base + 0xfffffffffffffef0>)>) @ 0x401200",
+                "ins_addr": "0x401200"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [
+                    "stdin"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    4198975
+                ]
+            },
+            "rank": 0.5,
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.10160279273986816,
+    "vra_time": 1.7440314292907715,
+    "path": "C:\\Users\\hp\\Documents\\Codex\\2026-11-03\\new-chat\\work\\unpacked\\operation-mango-public-master\\package\\tests\\binaries\\early_resolve\\program",
+    "name": "program",
+    "has_sinks": true,
+    "sha256": "e2f7f7da1ff8d52ffeeab83a38ab5ddfaf7b02de6a3fd1220df9c3c3817cfa2a",
+    "sink_times": {
+        "system": 0.20406889915466309
+    },
+    "error": null,
+    "mango_time": 0.2602818012237549,
+    "sinks": {
+        "system": 4
+    },
+    "time_data": {
+        "0x4012b9 -> 0x4010c0": {
+            "taint_time": 0.01896953582763672,
+            "rda_time": 0.02000713348388672
+        },
+        "0x401306 -> 0x4010c0": {
+            "taint_time": 0.03387141227722168,
+            "rda_time": 0.012577533721923828
+        },
+        "0x4011e9 -> 0x401208 -> 0x4010c0": {
+            "taint_time": 0.03295731544494629,
+            "rda_time": 0.04023122787475586
+        }
+    }
+}

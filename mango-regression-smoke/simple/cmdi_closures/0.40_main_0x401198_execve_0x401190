@@ -1,0 +1,35 @@
+main(
+     rdi: "<BV64 TOP><BV64 ARGC>",
+     rsi: <BV64 stack_base + 0xdeadc0de>,
+     ) @ 0x401198
+|a(
+|  rdi: ARGV[1] | ARGV[1] -> "<BV64 ARGV_1>",
+|  ) @ 0x4011bf
+||id(
+||   rdi: ARGV[1] | ARGV[1] -> "<BV64 ARGV_1>",
+||   ) @ 0x401153
+||system(
+||       rdi: ARGV[1] | ARGV[1] -> "<BV64 ARGV_1>",
+||       ) @ 0x40115f -> <BV64 0x0>
+|b(
+|  rdi: ARGV[1] | ARGV[1] -> "<BV64 ARGV_1>",
+|  ) @ 0x4011dc
+||id(
+||   rdi: ARGV[1] | ARGV[1] -> "<BV64 ARGV_1>",
+||   ) @ 0x40117a
+||execve(
+||       rdi: ARGV[1] | ARGV[1] -> "<BV64 ARGV_1>",
+||       rsi: <BV64 0x0>,
+||       rdx: <BV64 0x0>,
+||       ) @ 0x401190
+
+BINARY: program
+INPUT SOURCES:
+Likely:
+----------
+KEY: "ARGV"
+Sink: "ARGV"
+----------
+Possibly:
+NONE
+RANK: 0.400

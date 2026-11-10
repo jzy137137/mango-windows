@@ -1,0 +1,88 @@
+[11/05/26 20:32:51] CRITICAL TARGETING SINKS: system                           
+                    INFO     Running RDA Taint on function resolved@0x4011a9...
+                    INFO     Running RDA on function resolved@0x4011a9...      
+                    INFO     Found 1 potential sinks.                          
+                    INFO     Resolved call to system:                          
+                    INFO     |system(                                          
+                    INFO     |       rdi: <BV64 stack_base +                   
+                             0xffffffffffffffb0> -> "ls -alh ~/",              
+                    INFO     |       ) @ 0x4011fd -> <BV64 0x0>                
+                    INFO     Found 0 unresolved vulnerable definitions.        
+                    INFO     Exclude function 0x4011a9 from future slices since
+                             the data dependencies are fully resolved.         
+                    INFO     Analyzed 0/2 for sink system                      
+                    INFO     Running RDA Taint on function                     
+                             unresolved@0x401219...                            
+                    INFO     Running RDA Taint on function main@0x401282...    
+                    INFO     Running RDA on function main@0x401282...          
+                    INFO     Found 1 potential sinks.                          
+                    INFO     Found 1 unresolved vulnerable definitions.        
+[11/05/26 20:32:52] CRITICAL **************************************************
+                    CRITICAL UNRESOLVED CLOSURES to system:                    
+                    CRITICAL --------------------------------------------------
+                    CRITICAL main(                                             
+                    CRITICAL      rdi: "<BV64 TOP><BV64 ARGC>",                
+                    CRITICAL      rsi: <BV64 stack_base + 0xdeadc0de>,         
+                    CRITICAL      ) @ 0x401282                                 
+                    CRITICAL |unresolved(                                      
+                    CRITICAL |           rdi: ARGV[1] -> "<BV64 ARGV_1>" |     
+                             ARGV[1],                                          
+                    CRITICAL |           ) @ 0x4012cb                          
+                    CRITICAL ||sprintf(                                        
+                    CRITICAL ||        rdi: <BV64 stack_base - 0x70> -> "ls    
+                             <BV64 ARGV_1>",                                   
+                    CRITICAL ||        rsi: <BV64 0x402012> -> "ls %s",        
+                    CRITICAL ||        rdx: ARGV[1] -> "<BV64 ARGV_1>" |       
+                             ARGV[1],                                          
+                    CRITICAL ||        ) @ 0x40125a -> <BV64 TOP>              
+                    CRITICAL ||system(                                         
+                    CRITICAL ||       rdi: <BV64 stack_base - 0x70> -> "ls     
+                             <BV64 ARGV_1>",                                   
+                    CRITICAL ||       ) @ 0x401266 -> <BV64 0x0>               
+                    CRITICAL                                                   
+                    CRITICAL BINARY: program                                   
+                    CRITICAL INPUT SOURCES:                                    
+                    CRITICAL Likely:                                           
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "ARGV"                                       
+                    CRITICAL Sink: "ARGV"                                      
+                    CRITICAL ----------                                        
+                    CRITICAL Possibly:                                         
+                    CRITICAL NONE                                              
+                    CRITICAL RANK: 0.400                                       
+                    INFO     Analyzed 1/2 for sink system                      
+Tracing path to sink system ------------------------------- 2/2 0:00:00 0:00:00
+                    CRITICAL **************************************************
+                    CRITICAL UNRESOLVED CLOSURES to system:                    
+                    CRITICAL --------------------------------------------------
+                    CRITICAL main(                                             
+                    CRITICAL      rdi: "<BV64 TOP><BV64 ARGC>",                
+                    CRITICAL      rsi: <BV64 stack_base + 0xdeadc0de>,         
+                    CRITICAL      ) @ 0x401282                                 
+                    CRITICAL |unresolved(                                      
+                    CRITICAL |           rdi: ARGV[1] -> "<BV64 ARGV_1>" |     
+                             ARGV[1],                                          
+                    CRITICAL |           ) @ 0x4012cb                          
+                    CRITICAL ||sprintf(                                        
+                    CRITICAL ||        rdi: <BV64 stack_base - 0x70> -> "ls    
+                             <BV64 ARGV_1>",                                   
+                    CRITICAL ||        rsi: <BV64 0x402012> -> "ls %s",        
+                    CRITICAL ||        rdx: ARGV[1] -> "<BV64 ARGV_1>" |       
+                             ARGV[1],                                          
+                    CRITICAL ||        ) @ 0x40125a -> <BV64 TOP>              
+                    CRITICAL ||system(                                         
+                    CRITICAL ||       rdi: <BV64 stack_base - 0x70> -> "ls     
+                             <BV64 ARGV_1>",                                   
+                    CRITICAL ||       ) @ 0x401266 -> <BV64 0x0>               
+                    CRITICAL                                                   
+                    CRITICAL BINARY: program                                   
+                    CRITICAL INPUT SOURCES:                                    
+                    CRITICAL Likely:                                           
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "ARGV"                                       
+                    CRITICAL Sink: "ARGV"                                      
+                    CRITICAL ----------                                        
+                    CRITICAL Possibly:                                         
+                    CRITICAL NONE                                              
+                    CRITICAL RANK: 0.400                                       
+                    INFO     Finished Running Analysis                         

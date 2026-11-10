@@ -1,0 +1,26 @@
+main->nested_1->nested_1->system
+--------------------------------------------------
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+nested_1(
+         rdi: <BV64 TOP>,
+         ) @ 0x4012b9
+|getenv(
+|       rdi: <BV64 0x402015> -> "UNKNOWN",
+|       ) @ 0x4012ee -> <BV64 heap_base>
+|system(
+|       rdi: <BV64 heap_base> -> "<BV256 getenv("UNKNOWN")@0x4012ee_5_256>",
+|       ) @ 0x4012fe -> <BV64 0x0>
+
+BINARY: program
+INPUT SOURCES:
+Likely:
+----------
+KEY: "UNKNOWN"
+Keywords: None
+Binary Source: UNKNOWN
+Sink: getenv("UNKNOWN")@0x4012ee
+----------
+Possibly:
+NONE
+RANK: 0.700

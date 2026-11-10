@@ -1,0 +1,18 @@
+main(
+     rdi: "<BV64 TOP><BV64 ARGC>",
+     rsi: <BV64 stack_base + 0xdeadc0de>,
+     ) @ 0x401122
+|system(
+|       rdi: ARGV[1] | ARGV[1] -> "<BV64 ARGV_1>",
+|       ) @ 0x401166 -> <BV64 0x0>
+
+BINARY: program
+INPUT SOURCES:
+Likely:
+----------
+KEY: "ARGV"
+Sink: "ARGV"
+----------
+Possibly:
+NONE
+RANK: 0.400

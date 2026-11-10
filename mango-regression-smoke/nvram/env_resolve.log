@@ -1,0 +1,11 @@
+[11/05/26 20:33:30] INFO     Running RDA Taint on function main@0x401129...    
+                    INFO     Running RDA on function main@0x401129...          
+                    INFO     Found 2 potential sinks.                          
+                    INFO     Adding command1: ls -la @(0x401150)               
+                    INFO     Adding command2: TOP @(0x40116d)                  
+                    INFO     Exclude function 0x401129 from future slices since
+                             the data dependencies are fully resolved.         
+                    INFO     Analyzed 0/1 for sink acosNvramConfig_set         
+Tracing path to sink acosNvramConfig_get ------------------ 0/0 0:00:00        
+Tracing path to sink acosNvramConfig_set ------------------ 1/1 0:00:00 0:00:00
+                    INFO     Finished Running Analysis                         

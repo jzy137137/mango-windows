@@ -1,0 +1,15 @@
+FIND: Parameter format not correct
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\hp\Documents\Codex\2026-11-03\new-chat\work\mango-pyenv\Scripts\env_resolve.exe\__main__.py", line 7, in <module>
+  File "C:\Users\hp\Documents\Codex\2026-11-03\new-chat\work\unpacked\operation-mango-public-master\package\argument_resolver\analysis\env_resolve.py", line 325, in main
+    EnvAnalysis.merge(Path(args.bin_path), Path(args.result_path))
+  File "C:\Users\hp\Documents\Codex\2026-11-03\new-chat\work\unpacked\operation-mango-public-master\package\argument_resolver\analysis\env_resolve.py", line 247, in merge
+    subprocess.check_output(
+  File "C:\Python311\Lib\subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['find', 'C:\\Users\\hp\\Documents\\Codex\\2026-11-03\\new-chat\\work\\mango-regression-smoke\\nvram\\env', '-type', 'f', '-name', 'env.json']' returned non-zero exit status 2.

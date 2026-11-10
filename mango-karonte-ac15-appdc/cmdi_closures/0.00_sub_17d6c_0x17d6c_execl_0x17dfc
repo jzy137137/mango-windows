@@ -1,0 +1,30 @@
+TRACE: sub_17d6c->execl
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sub_17d6c(
+          r0: <BV32 TOP>,
+          r1: <BV32 TOP>,
+          ) @ 0x17d6c
+|close(
+|      r0: <BV32 0x0>,
+|      ) @ 0x17dbc
+|dup2(
+|     r0: <BV32 TOP>,
+|     r1: <BV32 0x0>,
+|     ) @ 0x17dd4
+|close(
+|      r0: <BV32 TOP>,
+|      ) @ 0x17ddc
+|close(
+|      r0: <BV32 0x1>,
+|      ) @ 0x17de4
+|close(
+|      r0: <BV32 0x2>,
+|      ) @ 0x17dec
+|execl(
+|      r0: <BV32 TOP>,
+|      r1: <BV32 TOP>,
+|      ) @ 0x17dfc
+
+BINARY: tenda_ac15_app_data_center
+INPUT SOURCES:
+UNKNOWN

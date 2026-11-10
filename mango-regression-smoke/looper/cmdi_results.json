@@ -1,0 +1,53 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV64 TOP + ARGC>)>, <MultiValues(<BV64 stack_base + 0xdeadc0de>)>) @ 0x401122",
+                    "ins_addr": "0x401122"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x401166",
+                "ins_addr": "0x401166"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "ARGV"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.4,
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.10088872909545898,
+    "vra_time": 1.6516125202178955,
+    "path": "C:\\Users\\hp\\Documents\\Codex\\2026-11-03\\new-chat\\work\\unpacked\\operation-mango-public-master\\package\\tests\\binaries\\looper\\program",
+    "name": "program",
+    "has_sinks": true,
+    "sha256": "3fdd3680dbcea11c869f89bd961325b180a38e47125a4951312826a5ecc1b3a1",
+    "sink_times": {
+        "system": 0.05134320259094238
+    },
+    "error": null,
+    "mango_time": 0.08020973205566406,
+    "sinks": {
+        "system": 1
+    },
+    "time_data": {
+        "0x401122 -> 0x401040": {
+            "taint_time": 0.02555704116821289,
+            "rda_time": 0.0246279239654541
+        }
+    }
+}

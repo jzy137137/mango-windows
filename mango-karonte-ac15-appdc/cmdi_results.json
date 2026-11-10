@@ -1,0 +1,137 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main() @ 0x9f04",
+                    "ins_addr": "0x9f04"
+                },
+                {
+                    "function": "sub_9de8",
+                    "string": "sub_9de8(<MultiValues(<BV32 TOP + 0x1>)>, <MultiValues({0: {<BV32 0x0>, <BV32 heap_base + 0x34>}})>, <MultiValues({0: {<BV32 0x0>, <BV32 TOP>}})>, <MultiValues({0: {<BV32 TOP>, <BV32 0x1>, <BV32 0x0>, <BV32 0x2>}})>) @ 0xa1d0",
+                    "ins_addr": "0xa1d0"
+                },
+                {
+                    "function": "sub_a6e8",
+                    "string": "sub_a6e8(<MultiValues({0: {<BV32 TOP>, <BV32 0x0>}})>, <MultiValues({0: {<BV32 0x0>, <BV32 TOP>, <BV32 0x1>, <BV32 0x2>}})>) @ 0x9e8c",
+                    "ins_addr": "0x9e8c"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV32 stack_base - 0x1070>)>) @ 0xa7c0",
+                "ins_addr": "0xa7c0"
+            },
+            "depth": 3,
+            "inputs": {
+                "likely": [
+                    "REQUEST_METHOD"
+                ],
+                "possibly": [
+                    "SCRIPT_NAME",
+                    "QUERY_STRING",
+                    "CONTENT_LENGTH",
+                    "stdin",
+                    "fgets("
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    40768
+                ]
+            },
+            "rank": 7.7,
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_13368",
+                    "string": "sub_13368(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x13368",
+                    "ins_addr": "0x13368"
+                }
+            ],
+            "sink": {
+                "function": "popen",
+                "string": "popen(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x13384",
+                "ins_addr": "0x13384"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_17d6c",
+                    "string": "sub_17d6c(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x17d6c",
+                    "ins_addr": "0x17d6c"
+                }
+            ],
+            "sink": {
+                "function": "execl",
+                "string": "execl(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x17dfc",
+                "ins_addr": "0x17dfc"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 1.647935152053833,
+    "vra_time": 15.314785480499268,
+    "path": "D:\\tenda_ac15_app_data_center",
+    "name": "tenda_ac15_app_data_center",
+    "has_sinks": true,
+    "sha256": "41bf40ce4219f99a2e4cf4324d6978393e4bdd07adfc354bda52f884f8a5ec37",
+    "sink_times": {
+        "system": 6.181673765182495,
+        "popen": 0.03716230392456055,
+        "execl": 0.07678556442260742
+    },
+    "error": null,
+    "mango_time": 8.250081300735474,
+    "sinks": {
+        "system": 1,
+        "popen": 1,
+        "execl": 1
+    },
+    "time_data": {
+        "0xa6e8 -> 0x9de8 -> 0x9f04 -> 0x94a4": {
+            "taint_time": 2.312401533126831,
+            "rda_time": 3.869272232055664
+        },
+        "0x13368 -> 0x987c": {
+            "taint_time": 0.018654346466064453,
+            "rda_time": 0.018507957458496094
+        },
+        "0x17d6c -> 0x96fc": {
+            "taint_time": 0.03801274299621582,
+            "rda_time": 0.0387728214263916
+        }
+    }
+}

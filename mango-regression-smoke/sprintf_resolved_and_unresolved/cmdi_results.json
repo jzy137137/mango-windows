@@ -1,0 +1,62 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV64 TOP + ARGC>)>, <MultiValues(<BV64 stack_base + 0xdeadc0de>)>) @ 0x401282",
+                    "ins_addr": "0x401282"
+                },
+                {
+                    "function": "unresolved",
+                    "string": "unresolved(<MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x4012cb",
+                    "ins_addr": "0x4012cb"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV64 stack_base - 0x70>)>) @ 0x401266",
+                "ins_addr": "0x401266"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [
+                    "ARGV"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.4,
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.056855201721191406,
+    "vra_time": 1.7288708686828613,
+    "path": "C:\\Users\\hp\\Documents\\Codex\\2026-11-03\\new-chat\\work\\unpacked\\operation-mango-public-master\\package\\tests\\binaries\\sprintf_resolved_and_unresolved\\program",
+    "name": "program",
+    "has_sinks": true,
+    "sha256": "34f6c4b437464b985edd6c5edff593c965ad9c0b46c97391cfd40b00580cbfb2",
+    "sink_times": {
+        "system": 0.13306498527526855
+    },
+    "error": null,
+    "mango_time": 0.17306900024414062,
+    "sinks": {
+        "system": 3
+    },
+    "time_data": {
+        "0x4011a9 -> 0x4010a0": {
+            "taint_time": 0.021709203720092773,
+            "rda_time": 0.024379730224609375
+        },
+        "0x401219 -> 0x401282 -> 0x4010a0": {
+            "taint_time": 0.040155887603759766,
+            "rda_time": 0.03807973861694336
+        }
+    }
+}

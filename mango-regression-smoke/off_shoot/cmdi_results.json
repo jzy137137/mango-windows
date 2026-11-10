@@ -1,0 +1,64 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV64 TOP + ARGC>)>, <MultiValues(<BV64 stack_base + 0xdeadc0de>)>) @ 0x401402",
+                    "ins_addr": "0x401402"
+                },
+                {
+                    "function": "off_shoot_unresolved",
+                    "string": "off_shoot_unresolved(<MultiValues(<BV64 stack_base + 0xffffffffffffff90>)>) @ 0x4014cf",
+                    "ins_addr": "0x4014cf"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV64 stack_base + 0xffffffffffffff90>)>) @ 0x4013e6",
+                "ins_addr": "0x4013e6"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [
+                    "stdin"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    4199305
+                ]
+            },
+            "rank": 0.5,
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.10396170616149902,
+    "vra_time": 1.7710790634155273,
+    "path": "C:\\Users\\hp\\Documents\\Codex\\2026-11-03\\new-chat\\work\\unpacked\\operation-mango-public-master\\package\\tests\\binaries\\off_shoot\\program",
+    "name": "program",
+    "has_sinks": true,
+    "sha256": "9f07cbf1ebe7d14af153611e7d488fb2de5ffb56881fa5a3a84622a11492bbeb",
+    "sink_times": {
+        "system": 0.4041297435760498
+    },
+    "error": null,
+    "mango_time": 0.6946289539337158,
+    "sinks": {
+        "system": 3
+    },
+    "time_data": {
+        "0x401334 -> 0x401402 -> 0x4010f0": {
+            "taint_time": 0.14598679542541504,
+            "rda_time": 0.2570326328277588
+        },
+        "0x4012df -> 0x4010f0": {
+            "taint_time": 0.07587504386901855,
+            "rda_time": 0.06139969825744629
+        }
+    }
+}

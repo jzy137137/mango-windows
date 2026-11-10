@@ -1,0 +1,92 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV64 TOP + ARGC>)>, <MultiValues(<BV64 stack_base + 0xdeadc0de>)>, <MultiValues(<BV64 TOP + ENVP>)>) @ 0x4012ab",
+                    "ins_addr": "0x4012ab"
+                },
+                {
+                    "function": "layer_1",
+                    "string": "layer_1(<MultiValues(<BV64 0x402004>)>, <MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x4012e2",
+                    "ins_addr": "0x4012e2"
+                },
+                {
+                    "function": "layer_2",
+                    "string": "layer_2(<MultiValues(<BV64 0x402004>)>, <MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x401170",
+                    "ins_addr": "0x401170"
+                },
+                {
+                    "function": "layer_3",
+                    "string": "layer_3(<MultiValues(<BV64 0x402004>)>, <MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x40119f",
+                    "ins_addr": "0x40119f"
+                },
+                {
+                    "function": "layer_4",
+                    "string": "layer_4(<MultiValues(<BV64 0x402004>)>, <MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x4011ce",
+                    "ins_addr": "0x4011ce"
+                },
+                {
+                    "function": "layer_5",
+                    "string": "layer_5(<MultiValues(<BV64 0x402004>)>, <MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x4011fd",
+                    "ins_addr": "0x4011fd"
+                },
+                {
+                    "function": "layer_6",
+                    "string": "layer_6(<MultiValues(<BV64 0x402004>)>, <MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x40122c",
+                    "ins_addr": "0x40122c"
+                },
+                {
+                    "function": "layer_7b",
+                    "string": "layer_7b(<MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x401265",
+                    "ins_addr": "0x401265"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x4012a3",
+                "ins_addr": "0x4012a3"
+            },
+            "depth": 8,
+            "inputs": {
+                "likely": [
+                    "ARGV"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.4,
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.11257123947143555,
+    "vra_time": 1.7630720138549805,
+    "path": "C:\\Users\\hp\\Documents\\Codex\\2026-11-03\\new-chat\\work\\unpacked\\operation-mango-public-master\\package\\tests\\binaries\\layered\\program",
+    "name": "program",
+    "has_sinks": true,
+    "sha256": "4cc191a84cff3a30ebe1872ba9af94a47684bbac89e953e21fb1e9c6ef10e1e9",
+    "sink_times": {
+        "system": 0.19093656539916992
+    },
+    "error": null,
+    "mango_time": 0.49138331413269043,
+    "sinks": {
+        "system": 3
+    },
+    "time_data": {
+        "0x40128c -> 0x401234 -> 0x401205 -> 0x4011d6 -> 0x4011a7 -> 0x401178 -> 0x401149 -> 0x4012ab -> 0x401050": {
+            "taint_time": 0.10607481002807617,
+            "rda_time": 0.08486175537109375
+        },
+        "0x40126d -> 0x401234 -> 0x401205 -> 0x4011d6 -> 0x4011a7 -> 0x401178 -> 0x401149 -> 0x4012ab -> 0x401050": {
+            "taint_time": 0.09012937545776367,
+            "rda_time": 0.13160276412963867
+        }
+    }
+}

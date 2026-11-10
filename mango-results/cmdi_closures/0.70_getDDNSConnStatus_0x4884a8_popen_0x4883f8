@@ -1,0 +1,60 @@
+TRACE: formGetSysToolDDNS->getDDNSConnStatus->sub_48838c->popen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+getDDNSConnStatus(
+                  ) @ 0x4884a8
+|GetValue(
+|         a0: <BV32 0x4db910> -> "wan1.connecttype",
+|         a1: <BV32 stack_base + 0xffffffbc> -> <BV16 0x0>,
+|         ) @ 0x488530
+|GetValue(
+|         a0: <BV32 0x4db924> -> "sys.mode",
+|         a1: <BV32 stack_base + 0xffffffac> -> <BV16 0x0>,
+|         ) @ 0x488554
+|atoi(
+|     a0: <BV32 stack_base + 0xffffffac> -> "<BV256 
+GetValue("sys.mode")@0x488554>",
+|     ) @ 0x488570 -> <BV32 TOP>
+|atoi(
+|     a0: <BV32 stack_base + 0xffffffbc> -> "<BV128 
+GetValue("sys.mode")@0x488554[127:0]><BV128 
+GetValue("wan1.connecttype")@0x488530[127:0]>" | "<BV128 
+GetValue("sys.mode")@0x488554[127:0]><BV128 
+GetValue("wan1.connecttype")@0x488530[127:0]>",
+|     ) @ 0x488590 -> <BV32 TOP>
+|ifaddrs_get_wan_ifname(
+|                       a0: <BV32 0x1>,
+|                       a1: <BV32 TOP>,
+|                       a2: <BV32 TOP>,
+|                       ) @ 0x4885b0
+|sprintf(
+|        a0: <BV32 stack_base + 0xffffffcc> -> "cat /etc/ddns_<BV32 TOP>",
+|        a1: <BV32 0x4db930> -> "cat /etc/ddns_%s",
+|        a2: <BV32 TOP>,
+|        ) @ 0x4885e0 -> <BV32 TOP>
+|sub_48838c(
+|           a0: <BV32 stack_base + 0xffffffcc> -> "cat /etc/ddns_<BV32 TOP>",
+|           a1: <BV32 stack_base + 0xffffffec> -> <BV16 0x0>,
+|           ) @ 0x488608 -> [<BV32 0xffffffff>, <BV32 0x0>, <BV32 0xffffffff>]
+||popen(
+||      a0: <BV32 stack_base + 0xffffffcc> -> "cat /etc/ddns_<BV32 TOP>",
+||      a1: <BV32 0x4db90c> -> "r",
+||      ) @ 0x4883f8
+
+BINARY: httpd
+INPUT SOURCES:
+Likely:
+NONE
+Possibly:
+----------
+KEY: "sys.mode"
+Keywords: None
+Binary Source - UNKNOWN
+GetValue("sys.mode")@0x488554
+----------
+----------
+KEY: "wan1.connecttype"
+Keywords: None
+Binary Source - UNKNOWN
+GetValue("wan1.connecttype")@0x488530
+----------
+RANK: 0.700

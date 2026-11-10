@@ -1,0 +1,108 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "child_func",
+                    "string": "child_func(<MultiValues(<BV64 TOP>)>, <MultiValues(<BV64 TOP>)>) @ 0x401169",
+                    "ins_addr": "0x401169"
+                },
+                {
+                    "function": "recursive_child_resolve",
+                    "string": "recursive_child_resolve(<MultiValues(<BV64 TOP>)>, <MultiValues(<BV64 0#32 .. TOP[31:0] - 0x1>)>) @ 0x401191",
+                    "ins_addr": "0x401191"
+                },
+                {
+                    "function": "child_func",
+                    "string": "child_func(<MultiValues(<BV64 TOP>)>, <MultiValues(<BV64 0#32 .. TOP[31:0] - 0x1>)>) @ 0x4011be",
+                    "ins_addr": "0x4011be"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV64 TOP>)>) @ 0x4011d1",
+                "ins_addr": "0x4011d1"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV64 TOP + ARGC>)>, <MultiValues(<BV64 stack_base + 0xdeadc0de>)>) @ 0x40121d",
+                    "ins_addr": "0x40121d"
+                },
+                {
+                    "function": "recursive_child_resolve",
+                    "string": "recursive_child_resolve(<MultiValues(<BV64 stack_base + 0xdeadc2de>)>, <MultiValues(<BV64 0xa>)>) @ 0x4012d1",
+                    "ins_addr": "0x4012d1"
+                },
+                {
+                    "function": "recursive_child_resolve",
+                    "string": "recursive_child_resolve(<MultiValues(<BV64 stack_base + 0xdeadc2de>)>, <MultiValues(<BV64 0x9>)>) @ 0x401191",
+                    "ins_addr": "0x401191"
+                }
+            ],
+            "sink": {
+                "function": "system",
+                "string": "system(<MultiValues(<BV64 stack_base + 0xdeadc2de>)>) @ 0x4011d1",
+                "ins_addr": "0x4011d1"
+            },
+            "depth": 4,
+            "inputs": {
+                "likely": [
+                    "ARGV"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.4,
+            "reachable_from_main": true,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 0.05761313438415527,
+    "vra_time": 1.7977418899536133,
+    "path": "C:\\Users\\hp\\Documents\\Codex\\2026-11-03\\new-chat\\work\\unpacked\\operation-mango-public-master\\package\\tests\\binaries\\recursive\\program",
+    "name": "program",
+    "has_sinks": true,
+    "sha256": "99abd47c5b3fd04451f443d5aa41826a84027b96f7f0f483fdef3b82f30bc0c2",
+    "sink_times": {
+        "system": 0.29648518562316895
+    },
+    "error": null,
+    "mango_time": 0.3401622772216797,
+    "sinks": {
+        "system": 3
+    },
+    "time_data": {
+        "0x401199 -> 0x401169 -> 0x401070": {
+            "taint_time": 0.042249441146850586,
+            "rda_time": 0.03513979911804199
+        },
+        "0x4011d9 -> 0x401070": {
+            "taint_time": 0.0467376708984375,
+            "rda_time": 0.03333401679992676
+        },
+        "0x401199 -> 0x40121d -> 0x401070": {
+            "taint_time": 0.027078628540039062,
+            "rda_time": 0.06617379188537598
+        }
+    }
+}

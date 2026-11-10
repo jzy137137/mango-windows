@@ -1,0 +1,26 @@
+WARNING  | 2026-11-05 20:37:11,635 | cle.backends.externs | Symbol was allocated without a known size; emulation may fail if it is used non-opaquely: acosNvramConfig_get
+WARNING  | 2026-11-05 20:37:11,636 | cle.backends.externs | Symbol was allocated without a known size; emulation may fail if it is used non-opaquely: system
+WARNING  | 2026-11-05 20:37:11,636 | cle.backends.externs | Symbol was allocated without a known size; emulation may fail if it is used non-opaquely: acosNvramConfig_set
+WARNING  | 2026-11-05 20:37:11,636 | cle.loader     | For more information about "Symbol was allocated without a known size",see https://docs.angr.io/extending-angr/environment#simdata
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Users\hp\Documents\Codex\2026-11-03\new-chat\work\mango-pyenv\Scripts\mango.exe\__main__.py", line 7, in <module>
+  File "C:\Users\hp\Documents\Codex\2026-11-03\new-chat\work\unpacked\operation-mango-public-master\package\argument_resolver\analysis\mango.py", line 767, in main
+    analyzer = MangoAnalysis(**args.__dict__)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Documents\Codex\2026-11-03\new-chat\work\unpacked\operation-mango-public-master\package\argument_resolver\analysis\mango.py", line 41, in __init__
+    super().__init__(*args, **kwargs)
+  File "C:\Users\hp\Documents\Codex\2026-11-03\new-chat\work\unpacked\operation-mango-public-master\package\argument_resolver\analysis\base.py", line 155, in __init__
+    self.env_dict = self.load_env_dict(env_dict)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hp\Documents\Codex\2026-11-03\new-chat\work\unpacked\operation-mango-public-master\package\argument_resolver\analysis\base.py", line 323, in load_env_dict
+    env_dict = json.loads(Path(env_dict_path).read_text())
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\pathlib.py", line 1058, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Python311\Lib\pathlib.py", line 1044, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\hp\\Documents\\Codex\\2026-11-03\\new-chat\\work\\mango-regression-smoke\\nvram\\env.json'

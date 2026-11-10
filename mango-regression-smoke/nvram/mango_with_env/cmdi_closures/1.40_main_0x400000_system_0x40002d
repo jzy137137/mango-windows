@@ -1,0 +1,31 @@
+main(
+     rdi: "<BV64 TOP><BV64 ARGC>",
+     rsi: <BV64 stack_base + 0xdeadc0de>,
+     ) @ 0x400000
+|SOURCES: {'command1'}
+|UNKNOWN
+|acosNvramConfig_get(
+|                    rdi: <BV64 0x400071> -> "command1",
+|                    ) @ 0x40001d -> <BV64 heap_base>
+|system(
+|       rdi: <BV64 heap_base> -> "<BV256 
+acosNvramConfig_get("command1")@0x40001d>",
+|       ) @ 0x40002d -> <BV64 0x0>
+
+BINARY: program
+INPUT SOURCES:
+Likely:
+----------
+KEY: "command1"
+Keywords: None
+Binary Source: UNKNOWN
+Sink: acosNvramConfig_get("command1")@0x40001d
+----------
+Possibly:
+----------
+KEY: "command2"
+Keywords: None
+Binary Source - UNKNOWN
+acosNvramConfig_get("command2")@0x40003c
+----------
+RANK: 1.400

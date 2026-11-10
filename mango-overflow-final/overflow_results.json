@@ -1,0 +1,189 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>, <MultiValues(<BV32 TOP + ENVP>)>, <MultiValues(<BV32 TOP>)>) @ 0x433464",
+                    "ins_addr": "0x433464"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 0x4ffa6c>)>, <MultiValues(<BV32 stack_base + 0xfffff960>)>) @ 0x433824",
+                "ins_addr": "0x433824"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.ip"
+                ],
+                "possibly": [
+                    "lan.webipen",
+                    "lan.webport",
+                    "lan.webiplansslen"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    4405248
+                ]
+            },
+            "rank": 1.4,
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "R7WebsSecurityHandler",
+                    "string": "R7WebsSecurityHandler(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x435150",
+                    "ins_addr": "0x435150"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base + 0xfffffaec>)>, <MultiValues(<BV32 0x4ffabc>)>) @ 0x435c20",
+                "ins_addr": "0x435c20"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "sys.quickset.cfg",
+                    "lan_dhcpc_ip"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "R7WebsSecurityHandler",
+                    "string": "R7WebsSecurityHandler(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x435150",
+                    "ins_addr": "0x435150"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 stack_base + 0xfffffa54>)>, <MultiValues({0: {<BV32 0x4cd3cc>, <BV32 0x4ccf48>, <BV32 TOP>}})>) @ 0x43656c",
+                "ins_addr": "0x43656c"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "sys.quickset.cfg",
+                    "lan_dhcpc_ip"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_469eb0",
+                    "string": "sub_469eb0(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x469eb0",
+                    "ins_addr": "0x469eb0"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues({0: {<BV32 Reverse(GetValue(\"cgi_debug\")@0x46bdc0[31:0]) + 0x20>, <BV32 stack_base + 0xffffff64>}})>, <MultiValues({0: {<BV32 TOP>, <BV32 Reverse(GetValue(\"cgi_debug\")@0x46bdc0[63:32])>}})>) @ 0x46be90",
+                "ins_addr": "0x46be90"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [
+                    "cgi_debug"
+                ],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    4628360,
+                    4635888,
+                    4636096
+                ]
+            },
+            "rank": 0.7,
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_469eb0",
+                    "string": "sub_469eb0(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x469eb0",
+                    "ins_addr": "0x469eb0"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues({0: {<BV32 Reverse(GetValue(\"cgi_debug\")@0x46bdc0[31:0])>, <BV32 stack_base + 0xffffff44>}})>, <MultiValues(<BV32 TOP + 0x1>)>) @ 0x46beb4",
+                "ins_addr": "0x46beb4"
+            },
+            "depth": 2,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "cgi_debug"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 80.95052480697632,
+    "vra_time": 114.3076639175415,
+    "path": "D:\\ac20.extracted\\httpd",
+    "name": "httpd",
+    "has_sinks": true,
+    "sha256": "6887f4676af57e8eb74d289d4e1e3d256a615d3ff03bd6bc25b8fa765eb98af7",
+    "sink_times": {
+        "strcpy": 203.9162564277649
+    },
+    "error": null,
+    "mango_time": 203.97141885757446,
+    "sinks": {
+        "strcpy": 108
+    },
+    "time_data": {
+        "0x433464 -> 0x5002b8": {
+            "taint_time": 0.5562961101531982,
+            "rda_time": 2.071113348007202
+        },
+        "0x435150 -> 0x5002b8": {
+            "taint_time": 127.78266167640686,
+            "rda_time": 72.56173777580261
+        },
+        "0x469eb0 -> 0x5002b8": {
+            "taint_time": 0.4172234535217285,
+            "rda_time": 0.3893437385559082
+        }
+    }
+}

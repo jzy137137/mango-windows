@@ -1,0 +1,14 @@
+{
+  "1": {
+    "acosNvramConfig_set": {
+      "keys": {
+        "keywords": [],
+        "sha256": "e643fb8b22016a43c40c5d023327a33006ce266b5bb237ceea9493e22ca1fe90",
+        "values": [
+          {"value": "ls -la", "locations": ["0x401150"], "pos": "1"},
+          {"value": "TOP", "locations": ["0x40116d"], "pos": "1"}
+        ]
+      }
+    }
+  }
+}

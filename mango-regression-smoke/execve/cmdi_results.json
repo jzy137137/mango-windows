@@ -1,0 +1,21 @@
+{
+    "closures": [],
+    "cfg_time": 0.05198311805725098,
+    "vra_time": 1.6909844875335693,
+    "path": "C:\\Users\\hp\\Documents\\Codex\\2026-11-03\\new-chat\\work\\unpacked\\operation-mango-public-master\\package\\tests\\binaries\\execve\\program",
+    "name": "program",
+    "has_sinks": true,
+    "sha256": "087291d8c53a1d88f609a7311870ce12e3b6d442dedbeb0eab3e0e42ea0bea53",
+    "sink_times": {},
+    "error": null,
+    "mango_time": 0.07793474197387695,
+    "sinks": {
+        "execve": 2
+    },
+    "time_data": {
+        "0x401189 -> 0x401090": {
+            "taint_time": 0.028928518295288086,
+            "rda_time": 0.03441619873046875
+        }
+    }
+}

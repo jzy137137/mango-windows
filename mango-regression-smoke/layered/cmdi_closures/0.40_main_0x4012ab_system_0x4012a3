@@ -1,0 +1,52 @@
+main(
+     rdi: "<BV64 TOP><BV64 ARGC>",
+     rsi: <BV64 stack_base + 0xdeadc0de>,
+     rdx: "<BV64 TOP><BV64 ENVP>",
+     ) @ 0x4012ab
+|layer_1(
+|        rdi: <BV64 0x402004> -> "ls -la",
+|        rsi: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+|        ) @ 0x4012e2
+||layer_2(
+||        rdi: <BV64 0x402004> -> "ls -la",
+||        rsi: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+||        ) @ 0x401170
+|||layer_3(
+|||        rdi: <BV64 0x402004> -> "ls -la",
+|||        rsi: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+|||        ) @ 0x40119f
+||||layer_4(
+||||        rdi: <BV64 0x402004> -> "ls -la",
+||||        rsi: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+||||        ) @ 0x4011ce
+|||||layer_5(
+|||||        rdi: <BV64 0x402004> -> "ls -la",
+|||||        rsi: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+|||||        ) @ 0x4011fd
+||||||layer_6(
+||||||        rdi: <BV64 0x402004> -> "ls -la",
+||||||        rsi: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+||||||        ) @ 0x40122c
+|||||||layer_7a(
+|||||||         rdi: <BV64 0x402004> -> "ls -la",
+|||||||         ) @ 0x401254
+||||||||system(
+||||||||       rdi: <BV64 0x402004> -> "ls -la",
+||||||||       ) @ 0x401284 -> <BV64 0x0>
+|||||||layer_7b(
+|||||||         rdi: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+|||||||         ) @ 0x401265
+||||||||system(
+||||||||       rdi: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+||||||||       ) @ 0x4012a3 -> <BV64 0x0>
+
+BINARY: program
+INPUT SOURCES:
+Likely:
+----------
+KEY: "ARGV"
+Sink: "ARGV"
+----------
+Possibly:
+NONE
+RANK: 0.400

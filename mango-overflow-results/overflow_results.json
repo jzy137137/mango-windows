@@ -1,0 +1,123 @@
+{
+    "closures": [
+        {
+            "trace": [
+                {
+                    "function": "main",
+                    "string": "main(<MultiValues(<BV32 TOP + ARGC>)>, <MultiValues(<BV32 stack_base + 0xdeadc0de>)>, <MultiValues(<BV32 TOP + ENVP>)>, <MultiValues(<BV32 TOP>)>) @ 0x433464",
+                    "ins_addr": "0x433464"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 0x4ffa6c>)>, <MultiValues(<BV32 stack_base + 0xfffff960>)>) @ 0x433824",
+                "ins_addr": "0x433824"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [
+                    "lan.ip"
+                ],
+                "possibly": [
+                    "lan.webiplansslen",
+                    "lan.webport",
+                    "lan.webipen"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": [
+                    4405248
+                ]
+            },
+            "rank": 1.4,
+            "reachable_from_main": true,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "sub_497f6c",
+                    "string": "sub_497f6c(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x497f6c",
+                    "ins_addr": "0x497f6c"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 stack_base + 0xfffffef8>)>) @ 0x4980f0",
+                "ins_addr": "0x4980f0"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [
+                    "TOP"
+                ],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0.7,
+            "reachable_from_main": false,
+            "sanitized": false
+        },
+        {
+            "trace": [
+                {
+                    "function": "GetParentControlInfo",
+                    "string": "GetParentControlInfo(<MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>, <MultiValues(<BV32 TOP>)>) @ 0x47345c",
+                    "ins_addr": "0x47345c"
+                }
+            ],
+            "sink": {
+                "function": "strcpy",
+                "string": "strcpy(<MultiValues(<BV32 TOP + 0x2>)>, <MultiValues({0: {<BV32 TOP>, <BV32 0x4ccf48>, <BV32 0x4d992c>}})>) @ 0x473544",
+                "ins_addr": "0x473544"
+            },
+            "depth": 1,
+            "inputs": {
+                "likely": [],
+                "possibly": [],
+                "tags": [
+                    "likely",
+                    "possibly"
+                ],
+                "valid_funcs": []
+            },
+            "rank": 0,
+            "reachable_from_main": false,
+            "sanitized": false
+        }
+    ],
+    "cfg_time": 81.14087772369385,
+    "vra_time": 117.69257712364197,
+    "path": "D:\\ac20.extracted\\httpd",
+    "name": "httpd",
+    "has_sinks": true,
+    "sha256": "6887f4676af57e8eb74d289d4e1e3d256a615d3ff03bd6bc25b8fa765eb98af7",
+    "sink_times": {
+        "strcpy": 3.501372814178467
+    },
+    "error": null,
+    "mango_time": 3.549748182296753,
+    "sinks": {
+        "strcpy": 108
+    },
+    "time_data": {
+        "0x433464 -> 0x5002b8": {
+            "taint_time": 0.5632939338684082,
+            "rda_time": 2.0812456607818604
+        },
+        "0x497f6c -> 0x5002b8": {
+            "taint_time": 0.06442975997924805,
+            "rda_time": 0.09205031394958496
+        },
+        "0x47345c -> 0x5002b8": {
+            "taint_time": 0.22060656547546387,
+            "rda_time": 0.24734711647033691
+        }
+    }
+}

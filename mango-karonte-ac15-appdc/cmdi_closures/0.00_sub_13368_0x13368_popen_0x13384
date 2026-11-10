@@ -1,0 +1,14 @@
+TRACE: sub_13368->popen
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+sub_13368(
+          r0: <BV32 TOP>,
+          r1: <BV32 TOP>,
+          ) @ 0x13368
+|popen(
+|      r0: <BV32 TOP>,
+|      r1: <BV32 TOP>,
+|      ) @ 0x13384
+
+BINARY: tenda_ac15_app_data_center
+INPUT SOURCES:
+UNKNOWN

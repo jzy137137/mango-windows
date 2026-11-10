@@ -1,0 +1,176 @@
+WARNING  | 2026-11-05 20:39:28,565 | cle.backends.externs | Symbol was allocated without a known size; emulation may fail if it is used non-opaquely: acosNvramConfig_get
+WARNING  | 2026-11-05 20:39:28,566 | cle.backends.externs | Symbol was allocated without a known size; emulation may fail if it is used non-opaquely: system
+WARNING  | 2026-11-05 20:39:28,566 | cle.backends.externs | Symbol was allocated without a known size; emulation may fail if it is used non-opaquely: acosNvramConfig_set
+WARNING  | 2026-11-05 20:39:28,566 | cle.loader     | For more information about "Symbol was allocated without a known size",see https://docs.angr.io/extending-angr/environment#simdata
+[11/05/26 20:39:30] CRITICAL TARGETING SINKS: system                           
+                    INFO     Running RDA Taint on function main@0x400000...    
+                    INFO     Running RDA on function main@0x400000...          
+                    INFO     Found 2 potential sinks.                          
+                    INFO     Found 2 unresolved vulnerable definitions.        
+                    CRITICAL **************************************************
+                    CRITICAL UNRESOLVED CLOSURES to system:                    
+                    CRITICAL --------------------------------------------------
+                    CRITICAL main(                                             
+                    CRITICAL      rdi: "<BV64 TOP><BV64 ARGC>",                
+                    CRITICAL      rsi: <BV64 stack_base + 0xdeadc0de>,         
+                    CRITICAL      ) @ 0x400000                                 
+                    CRITICAL |SOURCES: {'command1'}                            
+                    CRITICAL |UNKNOWN                                          
+                    CRITICAL |acosNvramConfig_get(                             
+                    CRITICAL |                    rdi: <BV64 0x400071> ->      
+                             "command1",                                       
+                    CRITICAL |                    ) @ 0x40001d -> <BV64        
+                             heap_base>                                        
+                    CRITICAL |system(                                          
+                    CRITICAL |       rdi: <BV64 heap_base> -> "<BV256          
+                             acosNvramConfig_get("command1")@0x40001d>",       
+                    CRITICAL |       ) @ 0x40002d -> <BV64 0x0>                
+                    CRITICAL                                                   
+                    CRITICAL BINARY: program                                   
+                    CRITICAL INPUT SOURCES:                                    
+                    CRITICAL Likely:                                           
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "command1"                                   
+                    CRITICAL Keywords: None                                    
+                    CRITICAL Binary Source: UNKNOWN                            
+                    CRITICAL Sink: acosNvramConfig_get("command1")@0x40001d    
+                    CRITICAL ----------                                        
+                    CRITICAL Possibly:                                         
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "command2"                                   
+                    CRITICAL Keywords: None                                    
+                    CRITICAL Binary Source - UNKNOWN                           
+                    CRITICAL acosNvramConfig_get("command2")@0x40003c          
+                    CRITICAL ----------                                        
+                    CRITICAL RANK: 1.400                                       
+                    CRITICAL **************************************************
+                    CRITICAL UNRESOLVED CLOSURES to system:                    
+                    CRITICAL --------------------------------------------------
+                    CRITICAL main(                                             
+                    CRITICAL      rdi: "<BV64 TOP><BV64 ARGC>",                
+                    CRITICAL      rsi: <BV64 stack_base + 0xdeadc0de>,         
+                    CRITICAL      ) @ 0x400000                                 
+                    CRITICAL |SOURCES: {'command1'}                            
+                    CRITICAL |UNKNOWN                                          
+                    CRITICAL |acosNvramConfig_get(                             
+                    CRITICAL |                    rdi: <BV64 0x400071> ->      
+                             "command1",                                       
+                    CRITICAL |                    ) @ 0x40001d -> <BV64        
+                             heap_base>                                        
+                    CRITICAL |system(                                          
+                    CRITICAL |       rdi: <BV64 heap_base> -> "<BV256          
+                             acosNvramConfig_get("command1")@0x40001d>",       
+                    CRITICAL |       ) @ 0x40002d -> <BV64 0x0>                
+                    CRITICAL |SOURCES: {'command2'}                            
+                    CRITICAL |UNKNOWN                                          
+                    CRITICAL |acosNvramConfig_get(                             
+                    CRITICAL |                    rdi: <BV64 0x40007a> ->      
+                             "command2",                                       
+                    CRITICAL |                    ) @ 0x40003c -> <BV64        
+                             heap_base + 0x20>                                 
+                    CRITICAL |system(                                          
+                    CRITICAL |       rdi: <BV64 heap_base + 0x20> -> "<BV256   
+                             acosNvramConfig_get("command2")@0x40003c>",       
+                    CRITICAL |       ) @ 0x40004c -> <BV64 0x0>                
+                    CRITICAL                                                   
+                    CRITICAL BINARY: program                                   
+                    CRITICAL INPUT SOURCES:                                    
+                    CRITICAL Likely:                                           
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "command2"                                   
+                    CRITICAL Keywords: None                                    
+                    CRITICAL Binary Source: UNKNOWN                            
+                    CRITICAL Sink: acosNvramConfig_get("command2")@0x40003c    
+                    CRITICAL ----------                                        
+                    CRITICAL Possibly:                                         
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "command1"                                   
+                    CRITICAL Keywords: None                                    
+                    CRITICAL Binary Source - UNKNOWN                           
+                    CRITICAL acosNvramConfig_get("command1")@0x40001d          
+                    CRITICAL ----------                                        
+                    CRITICAL RANK: 1.400                                       
+                    INFO     Analyzed 0/1 for sink system                      
+Tracing path to sink system ------------------------------- 1/1 0:00:00 0:00:00
+                    CRITICAL **************************************************
+                    CRITICAL UNRESOLVED CLOSURES to system:                    
+                    CRITICAL --------------------------------------------------
+                    CRITICAL main(                                             
+                    CRITICAL      rdi: "<BV64 TOP><BV64 ARGC>",                
+                    CRITICAL      rsi: <BV64 stack_base + 0xdeadc0de>,         
+                    CRITICAL      ) @ 0x400000                                 
+                    CRITICAL |SOURCES: {'command1'}                            
+                    CRITICAL |UNKNOWN                                          
+                    CRITICAL |acosNvramConfig_get(                             
+                    CRITICAL |                    rdi: <BV64 0x400071> ->      
+                             "command1",                                       
+                    CRITICAL |                    ) @ 0x40001d -> <BV64        
+                             heap_base>                                        
+                    CRITICAL |system(                                          
+                    CRITICAL |       rdi: <BV64 heap_base> -> "<BV256          
+                             acosNvramConfig_get("command1")@0x40001d>",       
+                    CRITICAL |       ) @ 0x40002d -> <BV64 0x0>                
+                    CRITICAL                                                   
+                    CRITICAL BINARY: program                                   
+                    CRITICAL INPUT SOURCES:                                    
+                    CRITICAL Likely:                                           
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "command1"                                   
+                    CRITICAL Keywords: None                                    
+                    CRITICAL Binary Source: UNKNOWN                            
+                    CRITICAL Sink: acosNvramConfig_get("command1")@0x40001d    
+                    CRITICAL ----------                                        
+                    CRITICAL Possibly:                                         
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "command2"                                   
+                    CRITICAL Keywords: None                                    
+                    CRITICAL Binary Source - UNKNOWN                           
+                    CRITICAL acosNvramConfig_get("command2")@0x40003c          
+                    CRITICAL ----------                                        
+                    CRITICAL RANK: 1.400                                       
+                    CRITICAL --------------------------------------------------
+                    CRITICAL main(                                             
+                    CRITICAL      rdi: "<BV64 TOP><BV64 ARGC>",                
+                    CRITICAL      rsi: <BV64 stack_base + 0xdeadc0de>,         
+                    CRITICAL      ) @ 0x400000                                 
+                    CRITICAL |SOURCES: {'command1'}                            
+                    CRITICAL |UNKNOWN                                          
+                    CRITICAL |acosNvramConfig_get(                             
+                    CRITICAL |                    rdi: <BV64 0x400071> ->      
+                             "command1",                                       
+                    CRITICAL |                    ) @ 0x40001d -> <BV64        
+                             heap_base>                                        
+                    CRITICAL |system(                                          
+                    CRITICAL |       rdi: <BV64 heap_base> -> "<BV256          
+                             acosNvramConfig_get("command1")@0x40001d>",       
+                    CRITICAL |       ) @ 0x40002d -> <BV64 0x0>                
+                    CRITICAL |SOURCES: {'command2'}                            
+                    CRITICAL |UNKNOWN                                          
+                    CRITICAL |acosNvramConfig_get(                             
+                    CRITICAL |                    rdi: <BV64 0x40007a> ->      
+                             "command2",                                       
+                    CRITICAL |                    ) @ 0x40003c -> <BV64        
+                             heap_base + 0x20>                                 
+                    CRITICAL |system(                                          
+                    CRITICAL |       rdi: <BV64 heap_base + 0x20> -> "<BV256   
+                             acosNvramConfig_get("command2")@0x40003c>",       
+                    CRITICAL |       ) @ 0x40004c -> <BV64 0x0>                
+                    CRITICAL                                                   
+                    CRITICAL BINARY: program                                   
+                    CRITICAL INPUT SOURCES:                                    
+                    CRITICAL Likely:                                           
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "command2"                                   
+                    CRITICAL Keywords: None                                    
+                    CRITICAL Binary Source: UNKNOWN                            
+                    CRITICAL Sink: acosNvramConfig_get("command2")@0x40003c    
+                    CRITICAL ----------                                        
+                    CRITICAL Possibly:                                         
+                    CRITICAL ----------                                        
+                    CRITICAL KEY: "command1"                                   
+                    CRITICAL Keywords: None                                    
+                    CRITICAL Binary Source - UNKNOWN                           
+                    CRITICAL acosNvramConfig_get("command1")@0x40001d          
+                    CRITICAL ----------                                        
+                    CRITICAL RANK: 1.400                                       
+                    INFO     Finished Running Analysis                         

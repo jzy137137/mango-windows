@@ -1,0 +1,16 @@
+|strcpy(
+|       a0: <BV32 0x4ffa6c> -> "<BV32 TOP>",
+|       a1: <BV32 stack_base + 0xfffff960> -> "<BV256 
+GetValue("lan.ip")@0x433800>",
+|       ) @ 0x433824 -> <BV32 0x4ffa6c>
+
+BINARY: httpd
+INPUT SOURCES:
+Likely:
+----------
+KEY: "lan.ip"
+Keywords: None
+Binary Source: UNKNOWN
+Sink: GetValue("lan.ip")@0x433800
+----------
+RANK: 1.400

@@ -1,0 +1,26 @@
+main(
+     rdi: "<BV64 TOP><BV64 ARGC>",
+     rsi: <BV64 stack_base + 0xdeadc0de>,
+     ) @ 0x401282
+|unresolved(
+|           rdi: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+|           ) @ 0x4012cb
+||sprintf(
+||        rdi: <BV64 stack_base - 0x70> -> "ls <BV64 ARGV_1>",
+||        rsi: <BV64 0x402012> -> "ls %s",
+||        rdx: ARGV[1] -> "<BV64 ARGV_1>" | ARGV[1],
+||        ) @ 0x40125a -> <BV64 TOP>
+||system(
+||       rdi: <BV64 stack_base - 0x70> -> "ls <BV64 ARGV_1>",
+||       ) @ 0x401266 -> <BV64 0x0>
+
+BINARY: program
+INPUT SOURCES:
+Likely:
+----------
+KEY: "ARGV"
+Sink: "ARGV"
+----------
+Possibly:
+NONE
+RANK: 0.400

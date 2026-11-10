@@ -1,0 +1,24 @@
+main->recursive_child_resolve->child_func->recursive_child_resolve->child_func->
+system
+--------------------------------------------------
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+child_func(
+           rdi: <BV64 TOP>,
+           rsi: <BV64 TOP>,
+           ) @ 0x401169
+|recursive_child_resolve(
+|                        rdi: <BV64 TOP>,
+|                        rsi: "32<BV32 TOP[31:0] - 0x1>",
+|                        ) @ 0x401191
+||child_func(
+||           rdi: <BV64 TOP>,
+||           rsi: "32<BV32 TOP[31:0] - 0x1>",
+||           ) @ 0x4011be
+||system(
+||       rdi: <BV64 TOP>,
+||       ) @ 0x4011d1 -> <BV64 0x0>
+
+BINARY: program
+INPUT SOURCES:
+UNKNOWN

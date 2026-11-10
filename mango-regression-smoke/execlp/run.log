@@ -1,0 +1,15 @@
+[11/05/26 20:33:25] CRITICAL TARGETING SINKS: execlp                           
+                    INFO     Running RDA Taint on function main@0x401169...    
+                    INFO     Running RDA on function main@0x401169...          
+                    INFO     Found 1 potential sinks.                          
+                    INFO     Resolved call to execlp:                          
+                    INFO     |execlp(                                          
+                    INFO     |       rdi: <BV64 0x402004> -> "echo",           
+                    INFO     |       rsi: <BV64 0x402004> -> "echo",           
+                    INFO     |       rdx: <BV64 0x402009> -> "Hello",          
+                    INFO     |       rcx: ARGV[1] | ARGV[1] -> "<BV64 ARGV_1>",
+                    INFO     |       ) @ 0x4011c1                              
+                    INFO     Found 0 unresolved vulnerable definitions.        
+                    INFO     Analyzed 0/1 for sink execlp                      
+Tracing path to sink execlp ------------------------------- 1/1 0:00:00 0:00:00
+                    INFO     Finished Running Analysis                         

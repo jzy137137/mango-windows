@@ -1,0 +1,12 @@
+TRACE: R7WebsSecurityHandler->strcpy
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+|strcpy(
+|       a0: <BV32 stack_base + 0xfffffaec> -> <BV16 0x0>,
+|       a1: <BV32 0x4ffabc> -> "<BV32 TOP>",
+|       ) @ 0x435c20 -> <BV32 stack_base + 0xfffffaec>
+
+BINARY: httpd
+INPUT SOURCES:
+Likely:
+NONE
+RANK: 0.700

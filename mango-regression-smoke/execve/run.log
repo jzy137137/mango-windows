@@ -1,0 +1,15 @@
+[11/05/26 20:33:21] CRITICAL TARGETING SINKS: execve                           
+                    INFO     Running RDA Taint on function main@0x401189...    
+                    INFO     Running RDA on function main@0x401189...          
+                    INFO     Found 1 potential sinks.                          
+                    INFO     Resolved call to execve:                          
+                    INFO     |execve(                                          
+                    INFO     |       rdi: <BV64 0x402004> -> "./other_prog",   
+                    INFO     |       rsi: <BV64 stack_base +                   
+                             0xffffffffffffffd0> -> <BV32 0x4204000>,          
+                    INFO     |       rdx: <BV64 0x0>,                          
+                    INFO     |       ) @ 0x40120b                              
+                    INFO     Found 0 unresolved vulnerable definitions.        
+                    INFO     Analyzed 0/1 for sink execve                      
+Tracing path to sink execve ------------------------------- 1/1 0:00:00 0:00:00
+                    INFO     Finished Running Analysis                         
